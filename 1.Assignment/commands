@@ -1,0 +1,19 @@
+1.a
+    grep [0-9] faust.txt
+1.b
+    grep ^[0-9] faust.txt
+1.c
+    grep ^_ faust.txt
+1.d
+    grep "^_.*_$" faust.txt
+1.e
+    grep  "Strom" faust.txt
+
+2.a
+    wc -l faust.txt
+2.b
+    grep "^_.*_$" faustutf.txt | uniq | wc -l
+2.c
+    grep ^Und faustutf.txt | wc -l
+2.d
+    
