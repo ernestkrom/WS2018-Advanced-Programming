@@ -16,4 +16,6 @@
 2.c
     grep ^Und faustutf.txt | wc -l
 2.d
-    
+
+4.
+    sed -e 's/^[ \t]*//' faust1.txt > faust1ws.txt
