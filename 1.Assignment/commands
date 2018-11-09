@@ -16,6 +16,11 @@
 2.c
     grep ^Und faustutf.txt | wc -l
 2.d
+    cut -d ' ' -f3 log0.txt | sort | uniq
+    awk '{print $3}' log0.txt | sort | uniq
+
+3.
+  
 
 4.
-    sed -e 's/^[ \t]*//' faust1.txt > faust1ws.txt
+    sed -e 's/^[ ]*//' faust1.txt > faust1ws.txt
