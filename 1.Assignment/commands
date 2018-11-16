@@ -20,7 +20,7 @@
     awk '{print $3}' log0.txt | sort | uniq
 
 3.
-    awk 'BEGIN {SUBSEP = " "} {col[$3,$6]++} END {for(i in col) print i, col[i]}' log0.txt | sort
+    awk 'BEGIN {SUBSEP = " "}{if($6>=256&&$6<512)col[$3,"Task:"$6-256]++} END {for(i in col) print i, "Count:"col[i]}' log1.txt | sort -k 3,1
 
 4.
     sed -e 's/^[ ]*//' faust1.txt > faust1ws.txt
