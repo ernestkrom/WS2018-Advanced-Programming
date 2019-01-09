@@ -3,3 +3,8 @@
 /home/mbg/Rider_Projects/mytar/mytar/bin/Debug/mytar.exe
 /home/mbg/Rider_Projects/mytar/mytar/obj/Debug/mytar.exe
 /home/mbg/Rider_Projects/mytar/mytar/obj/Debug/mytar.exe.mdb
+/home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
+/home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/obj/Debug/mytar.exe
+/home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/obj/Debug/mytar.exe.mdb
+/home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/bin/Debug/mytar.exe.mdb
+/home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/bin/Debug/mytar.exe

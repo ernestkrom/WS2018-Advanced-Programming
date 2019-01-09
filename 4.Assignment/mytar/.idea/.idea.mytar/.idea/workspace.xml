@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1601e1b4-a91e-4291-bff7-46cc3808c152" name="Default Changelist" comment="" />
+    <list default="true" id="1601e1b4-a91e-4291-bff7-46cc3808c152" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.mytar/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.mytar/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mytar/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.mytar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mytar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytar/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/mytar/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytar/bin/Debug/mytar.exe" beforeDir="false" afterPath="$PROJECT_DIR$/mytar/bin/Debug/mytar.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytar/bin/Debug/mytar.exe.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/mytar/bin/Debug/mytar.exe.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytar/obj/Debug/mytar.csproj.FilesWrittenAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mytar/obj/Debug/mytar.csproj.FilesWrittenAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytar/obj/Debug/mytar.exe" beforeDir="false" afterPath="$PROJECT_DIR$/mytar/obj/Debug/mytar.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytar/obj/Debug/mytar.exe.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/mytar/obj/Debug/mytar.exe.mdb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,22 +23,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mytar/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state relative-caret-position="390">
+              <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
               <folding>
-                <marker date="1546980672593" expanded="true" signature="30:953" ph="{...}" />
-                <marker date="1546980672593" expanded="true" signature="59:951" ph="{...}" />
-                <marker date="1546980672593" expanded="true" signature="112:945" ph="{...}" />
-                <marker date="1546980672593" expanded="true" signature="459:850" ph="{...}" />
-                <marker date="1546980672593" expanded="true" signature="493:671" ph="{...}" />
-                <marker date="1546980672593" expanded="true" signature="705:836" ph="/* input for archiving is current directory ... */" />
-                <marker date="1546980672593" expanded="true" signature="867:935" ph="{...}" />
+                <marker date="1547051450816" expanded="true" signature="6:30" ph="..." />
+                <marker date="1547051450816" expanded="true" signature="47:1478" ph="{...}" />
+                <marker date="1547051450816" expanded="true" signature="76:1476" ph="{...}" />
+                <marker date="1547051450816" expanded="true" signature="129:1098" ph="{...}" />
+                <marker date="1547051450816" expanded="true" signature="191:996" ph="{...}" />
+                <marker date="1547051450816" expanded="true" signature="353:982" ph="{...}" />
+                <marker date="1547051450816" expanded="true" signature="539:707" ph="{...}" />
+                <marker date="1547051450816" expanded="true" signature="1028:1088" ph="{...}" />
+                <marker date="1547051450816" expanded="true" signature="1142:1470" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/mytar/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,6 +61,7 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -109,11 +125,12 @@
       <updated>1546978153410</updated>
       <workItem from="1546978156783" duration="2518000" />
       <workItem from="1546980699749" duration="589000" />
+      <workItem from="1547044873938" duration="6556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3107000" />
+    <option name="totallyTimeSpent" value="9663000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -127,26 +144,26 @@
   <component name="ToolWindowManager">
     <frame x="1080" y="444" width="1920" height="1040" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524013" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293348" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286026" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32969433" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969433" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="14" weight="0.3293348" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.3286026" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -173,15 +190,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mytar/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="390">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
-            <marker date="1546980672593" expanded="true" signature="59:951" ph="{...}" />
-            <marker date="1546980672593" expanded="true" signature="112:945" ph="{...}" />
-            <marker date="1546980672593" expanded="true" signature="459:850" ph="{...}" />
-            <marker date="1546980672593" expanded="true" signature="493:671" ph="{...}" />
-            <marker date="1546980672593" expanded="true" signature="705:836" ph="/* input for archiving is current directory ... */" />
-            <marker date="1546980672593" expanded="true" signature="867:935" ph="{...}" />
+            <marker date="1547051450816" expanded="true" signature="6:30" ph="..." />
+            <marker date="1547051450816" expanded="true" signature="47:1478" ph="{...}" />
+            <marker date="1547051450816" expanded="true" signature="76:1476" ph="{...}" />
+            <marker date="1547051450816" expanded="true" signature="129:1098" ph="{...}" />
+            <marker date="1547051450816" expanded="true" signature="191:996" ph="{...}" />
+            <marker date="1547051450816" expanded="true" signature="353:982" ph="{...}" />
+            <marker date="1547051450816" expanded="true" signature="539:707" ph="{...}" />
+            <marker date="1547051450816" expanded="true" signature="1028:1088" ph="{...}" />
+            <marker date="1547051450816" expanded="true" signature="1142:1470" ph="{...}" />
           </folding>
         </state>
       </provider>
