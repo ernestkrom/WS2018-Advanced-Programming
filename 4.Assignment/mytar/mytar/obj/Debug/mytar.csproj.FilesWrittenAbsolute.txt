@@ -1,0 +1,5 @@
+/home/mbg/Rider_Projects/mytar/mytar/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
+/home/mbg/Rider_Projects/mytar/mytar/bin/Debug/mytar.exe.mdb
+/home/mbg/Rider_Projects/mytar/mytar/bin/Debug/mytar.exe
+/home/mbg/Rider_Projects/mytar/mytar/obj/Debug/mytar.exe
+/home/mbg/Rider_Projects/mytar/mytar/obj/Debug/mytar.exe.mdb
