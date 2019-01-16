@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -15,16 +16,20 @@ namespace mytar
             {
                 ops = args[0];
                 dest = args[1];
-                src = Directory.GetCurrentDirectory();
+                src = Directory.GetCurrentDirectory() + "/src";
 
                 switch (ops)
                 {
                     case "--store":
-                        string contents="";
+                        
+                        
+                        
+                        string contents = "";
                         foreach (string file in Directory.EnumerateFiles(src, "*.*"))
                         {
                             contents += StringToBinary(File.ReadAllText(file));
                         }
+
                         Console.WriteLine((contents));
                         Console.WriteLine((BinaryToString(contents)));
                         break;
@@ -37,7 +42,7 @@ namespace mytar
             }
             catch (Exception e)
             {
-                Console.Write(e);
+                //Console.Write(e);
                 invokeManual();
             }
         }
@@ -50,25 +55,28 @@ namespace mytar
         public static string StringToBinary(string data)
         {
             StringBuilder sb = new StringBuilder();
- 
+
             foreach (char c in data.ToCharArray())
             {
                 sb.Append(Convert.ToString(c, 2).PadLeft(8, '0'));
             }
+
             return sb.ToString();
         }
-        
+
         public static string BinaryToString(string data)
         {
             List<Byte> byteList = new List<Byte>();
- 
+
             for (int i = 0; i < data.Length; i += 8)
             {
                 byteList.Add(Convert.ToByte(data.Substring(i, 8), 2));
             }
+
             return Encoding.ASCII.GetString(byteList.ToArray());
         }
         
+
         private static void invokeManual()
         {
             // @ indicates a verbatim string literal in this instance
