@@ -21,19 +21,22 @@ namespace mytar
                 switch (ops)
                 {
                     case "--store":
-                        
-                        
-                        
                         string contents = "";
-                        foreach (string file in Directory.EnumerateFiles(src, "*.*"))
-                        {
-                            contents += StringToBinary(File.ReadAllText(file));
-                        }
 
-                        Console.WriteLine((contents));
-                        Console.WriteLine((BinaryToString(contents)));
+                        foreach (var files in Directory.GetFiles(src))
+                        {
+                            FileInfo info = new FileInfo(files);
+                            var fileName = Path.GetFileName(info.FullName);
+                            var fileSize = Path.GetFileName(info.Length.ToString());
+
+                            contents = StringToBinary(File.ReadAllText(files));
+
+                            Console.WriteLine(fileName + " " + fileSize);
+                            Console.WriteLine(contents);
+                        }
                         break;
                     case "--restore":
+                        //TODO Jet to be implemented
                         break;
                     default:
                         invokeManual();
@@ -75,7 +78,7 @@ namespace mytar
 
             return Encoding.ASCII.GetString(byteList.ToArray());
         }
-        
+
 
         private static void invokeManual()
         {
