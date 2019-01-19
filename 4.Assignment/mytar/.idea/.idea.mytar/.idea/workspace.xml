@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/mytar/Program.cs" line="50" />
+    <bookmark url="file://$PROJECT_DIR$/mytar/Program.cs" line="43" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1601e1b4-a91e-4291-bff7-46cc3808c152" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mytar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mytar/.idea/workspace.xml" afterDir="false" />
@@ -20,23 +24,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mytar/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            <state relative-caret-position="590">
+              <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
               <folding>
-                <marker date="1547649488535" expanded="false" signature="6:109" ph="..." />
-                <marker date="1547649488535" expanded="true" signature="126:2783" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="155:2781" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="208:1527" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="270:1389" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="441:1375" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="613:1104" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="1421:1517" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="1537:1742" ph="/// https://www.fluxbytes.com/csharp/convert-string-to-binary-and-binary-to-string-in-c/ ... " />
-                <marker date="1547649488535" expanded="true" signature="1799:2053" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="1913:2008" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="2111:2402" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="2227:2326" ph="{...}" />
-                <marker date="1547649488535" expanded="true" signature="2447:2775" ph="{...}" />
+                <marker date="1547897389453" expanded="false" signature="6:109" ph="..." />
+                <marker date="1547897389453" expanded="true" signature="126:3390" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="155:3129" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="208:2751" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="270:2615" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="487:2601" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="621:1363" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="721:1337" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="1179:1307" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="1777:2106" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="2193:2451" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="2278:2425" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="2647:2741" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="2795:3123" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="3168:3388" ph="{...}" />
+                <marker date="1547897389453" expanded="true" signature="3308:3382" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -82,6 +88,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -130,7 +137,9 @@
       <workItem from="1547044873938" duration="7313000" />
       <workItem from="1547496264502" duration="2192000" />
       <workItem from="1547634019140" duration="2416000" />
-      <workItem from="1547647370904" duration="3160000" />
+      <workItem from="1547647370904" duration="6673000" />
+      <workItem from="1547807819974" duration="2908000" />
+      <workItem from="1547892586154" duration="4808000" />
     </task>
     <task id="LOCAL-00001" summary="First minor implementation">
       <created>1547051931755</created>
@@ -153,13 +162,20 @@
       <option name="project" value="LOCAL" />
       <updated>1547635769039</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Third minor implementation">
+      <created>1547651706903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547651706903</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18188000" />
+    <option name="totallyTimeSpent" value="29417000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -170,8 +186,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1080" y="444" width="1920" height="1040" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26307365" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13820705" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -188,7 +205,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32969433" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.32969433" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32969433" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.26637554" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.3286026" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -207,7 +224,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First minor implementation" />
     <MESSAGE value="Second minor implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second minor implementation" />
+    <MESSAGE value="Third minor implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Third minor implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -222,23 +240,25 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mytar/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        <state relative-caret-position="590">
+          <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
           <folding>
-            <marker date="1547649488535" expanded="false" signature="6:109" ph="..." />
-            <marker date="1547649488535" expanded="true" signature="126:2783" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="155:2781" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="208:1527" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="270:1389" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="441:1375" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="613:1104" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="1421:1517" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="1537:1742" ph="/// https://www.fluxbytes.com/csharp/convert-string-to-binary-and-binary-to-string-in-c/ ... " />
-            <marker date="1547649488535" expanded="true" signature="1799:2053" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="1913:2008" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="2111:2402" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="2227:2326" ph="{...}" />
-            <marker date="1547649488535" expanded="true" signature="2447:2775" ph="{...}" />
+            <marker date="1547897389453" expanded="false" signature="6:109" ph="..." />
+            <marker date="1547897389453" expanded="true" signature="126:3390" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="155:3129" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="208:2751" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="270:2615" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="487:2601" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="621:1363" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="721:1337" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="1179:1307" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="1777:2106" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="2193:2451" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="2278:2425" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="2647:2741" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="2795:3123" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="3168:3388" ph="{...}" />
+            <marker date="1547897389453" expanded="true" signature="3308:3382" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -15,28 +15,55 @@ namespace mytar
             try
             {
                 ops = args[0];
-                dest = args[1];
                 src = Directory.GetCurrentDirectory() + "/src";
+                dest = Directory.GetCurrentDirectory() + args[1] + "/packed";
 
                 switch (ops)
                 {
                     case "--store":
-                        string contents = "";
-
-                        foreach (var files in Directory.GetFiles(src))
+                        using (StreamWriter writetext = new StreamWriter(dest))
                         {
-                            FileInfo info = new FileInfo(files);
-                            var fileName = Path.GetFileName(info.FullName);
-                            var fileSize = Path.GetFileName(info.Length.ToString());
+                            foreach (var file in Directory.GetFiles(src))
+                            {
+                                FileInfo info = new FileInfo(file);
 
-                            contents = StringToBinary(File.ReadAllText(files));
+                                var fileName = Path.GetFileName(info.FullName);
+                                byte[] fileContent = File.ReadAllBytes(file);
 
-                            Console.WriteLine(fileName + " " + fileSize);
-                            Console.WriteLine(contents);
+                                writetext.WriteLine(fileName);
+                                writetext.WriteLine(fileContent.Length);
+
+                                foreach (var b in fileContent)
+                                {
+                                    writetext.WriteLine(b);
+                                }
+                            }
                         }
+
                         break;
                     case "--restore":
-                        //TODO Jet to be implemented
+                        //var str = System.Text.Encoding.Default.GetString(result);
+
+                        string[] lines = System.IO.File.ReadAllLines(dest);
+                        List<IndividualFileInfos> infoList = new List<IndividualFileInfos>();
+
+                        int pos = 0;
+                        while (pos < lines.Length)
+                        {
+                            IndividualFileInfos info =
+                                new IndividualFileInfos(lines[pos], Convert.ToInt32(lines[pos + 1]));
+                            infoList.Add(info);
+                            pos += Convert.ToInt32(lines[pos + 1]) + 2;
+                        }
+
+                        using (StreamWriter writetext = new StreamWriter("unpacked"))
+                        {
+                            foreach (var info in infoList)
+                            {
+                                writetext.Write(info.Name + " " + info.Length + "\n");
+                            }
+                        }
+
                         break;
                     default:
                         invokeManual();
@@ -45,40 +72,10 @@ namespace mytar
             }
             catch (Exception e)
             {
-                //Console.Write(e);
+                Console.Write(e);
                 invokeManual();
             }
         }
-
-        /// <summary>
-        /// https://www.fluxbytes.com/csharp/convert-string-to-binary-and-binary-to-string-in-c/
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        public static string StringToBinary(string data)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            foreach (char c in data.ToCharArray())
-            {
-                sb.Append(Convert.ToString(c, 2).PadLeft(8, '0'));
-            }
-
-            return sb.ToString();
-        }
-
-        public static string BinaryToString(string data)
-        {
-            List<Byte> byteList = new List<Byte>();
-
-            for (int i = 0; i < data.Length; i += 8)
-            {
-                byteList.Add(Convert.ToByte(data.Substring(i, 8), 2));
-            }
-
-            return Encoding.ASCII.GetString(byteList.ToArray());
-        }
-
 
         private static void invokeManual()
         {
@@ -87,6 +84,18 @@ namespace mytar
     --store:    packs all src into [dest]
     --restore:  unpacks all files stored in [dest] into the current directory
     --help:     this screen");
+        }
+    }
+
+    public struct IndividualFileInfos
+    {
+        public readonly string Name;
+        public readonly int Length;
+
+        public IndividualFileInfos(string name, int length)
+        {
+            Name = name;
+            Length = length;
         }
     }
 }
