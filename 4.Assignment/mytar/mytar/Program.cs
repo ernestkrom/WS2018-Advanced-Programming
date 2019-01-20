@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace mytar
@@ -21,47 +21,42 @@ namespace mytar
                 switch (ops)
                 {
                     case "--store":
-                        using (StreamWriter writetext = new StreamWriter(dest))
+                        FileStream fs = new FileStream(dest, FileMode.Create);
+                        BinaryWriter bw = new BinaryWriter(fs);
+
+                        foreach (string file in Directory.EnumerateFiles(src))
                         {
-                            foreach (var file in Directory.GetFiles(src))
-                            {
-                                FileInfo info = new FileInfo(file);
+                            string fname = Path.GetFileName(file);
+                            long flen = new FileInfo(file).Length;
+                            byte[] fcont = File.ReadAllBytes(file);
 
-                                var fileName = Path.GetFileName(info.FullName);
-                                byte[] fileContent = File.ReadAllBytes(file);
-
-                                writetext.WriteLine(fileName);
-                                writetext.WriteLine(fileContent.Length);
-
-                                foreach (var b in fileContent)
-                                {
-                                    writetext.WriteLine(b);
-                                }
-                            }
+                            bw.Write(fname);
+                            bw.Write(flen);
+                            bw.Write(fcont);
                         }
+
+                        bw.Close();
+                        fs.Close();
 
                         break;
                     case "--restore":
-                        //var str = System.Text.Encoding.Default.GetString(result);
+                        FileStream fs2 = new FileStream(dest, FileMode.Open);
+                        BinaryReader br = new BinaryReader(fs2);
+                        List<IndFiles> list = new List<IndFiles>();
+                        IndFiles indFile;
 
-                        string[] lines = System.IO.File.ReadAllLines(dest);
-                        List<IndividualFileInfos> infoList = new List<IndividualFileInfos>();
-
-                        int pos = 0;
-                        while (pos < lines.Length)
+                        while (br.BaseStream.Position != br.BaseStream.Length)
                         {
-                            IndividualFileInfos info =
-                                new IndividualFileInfos(lines[pos], Convert.ToInt32(lines[pos + 1]));
-                            infoList.Add(info);
-                            pos += Convert.ToInt32(lines[pos + 1]) + 2;
+                            var name = br.ReadString();
+                            var len = br.ReadInt64();
+                            var content = System.Text.Encoding.Default.GetString(br.ReadBytes((int) len));
+                            indFile = new IndFiles(name, len, content);
+                            list.Add(indFile);
                         }
 
-                        using (StreamWriter writetext = new StreamWriter("unpacked"))
+                        foreach (var f in list)
                         {
-                            foreach (var info in infoList)
-                            {
-                                writetext.Write(info.Name + " " + info.Length + "\n");
-                            }
+                            File.WriteAllText(f.name, f.cont);
                         }
 
                         break;
@@ -85,17 +80,20 @@ namespace mytar
     --restore:  unpacks all files stored in [dest] into the current directory
     --help:     this screen");
         }
-    }
 
-    public struct IndividualFileInfos
-    {
-        public readonly string Name;
-        public readonly int Length;
-
-        public IndividualFileInfos(string name, int length)
+        struct IndFiles
         {
-            Name = name;
-            Length = length;
+            public readonly string name;
+            public readonly long len;
+            public readonly string cont;
+
+
+            public IndFiles(string name, long len, string cont)
+            {
+                this.name = name;
+                this.len = len;
+                this.cont = cont;
+            }
         }
     }
 }
