@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar_c/main.cpp
+iostream
+-
+string
+-
+unistd.h
+-
+stdio.h
+-
+
