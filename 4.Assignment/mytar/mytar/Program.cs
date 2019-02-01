@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
 using System.Text;
 
 namespace mytar
@@ -10,56 +8,63 @@ namespace mytar
     {
         public static void Main(string[] args)
         {
-            string ops, dest, src;
+            string ops, dest, del;
 
             try
             {
                 ops = args[0];
-                src = Directory.GetCurrentDirectory() + "/src";
-                dest = Directory.GetCurrentDirectory() + args[1] + "/packed";
+                dest = Directory.GetCurrentDirectory() + "/" + args[1];
+                del = ";";
 
                 switch (ops)
                 {
                     case "--store":
-                        FileStream fs = new FileStream(dest, FileMode.Create);
-                        BinaryWriter bw = new BinaryWriter(fs);
+                        var fs = new FileStream(dest, FileMode.Create);
+                        var bw = new BinaryWriter(fs);
 
-                        foreach (string file in Directory.EnumerateFiles(src))
+                        for (var i = 2; i < args.Length; i++)
                         {
-                            string fname = Path.GetFileName(file);
-                            long flen = new FileInfo(file).Length;
-                            byte[] fcont = File.ReadAllBytes(file);
+                            var fileHeader =
+                                Encoding.ASCII.GetBytes(new FileInfo(args[i]).Length + "-" + args[i] + del);
+                            var fileContent = File.ReadAllBytes(args[i]);
 
-                            bw.Write(fname);
-                            bw.Write(flen);
-                            bw.Write(fcont);
+                            bw.Write(fileHeader);
+                            bw.Write(fileContent);
                         }
 
                         bw.Close();
                         fs.Close();
-
                         break;
+
                     case "--restore":
-                        FileStream fs2 = new FileStream(dest, FileMode.Open);
-                        BinaryReader br = new BinaryReader(fs2);
-                        List<IndFiles> list = new List<IndFiles>();
-                        IndFiles indFile;
+                        var content = File.ReadAllBytes(args[1]);
+                        var delimiter = (byte) ';';
+                        var pos = 0;
 
-                        while (br.BaseStream.Position != br.BaseStream.Length)
+                        while (pos < content.Length)
                         {
-                            var name = br.ReadString();
-                            var len = br.ReadInt64();
-                            var content = System.Text.Encoding.Default.GetString(br.ReadBytes((int) len));
-                            indFile = new IndFiles(name, len, content);
-                            list.Add(indFile);
-                        }
+                            var header = "";
+                            while (content[pos] != delimiter)
+                            {
+                                header += (char) content[pos];
+                                pos++;
+                            }
 
-                        foreach (var f in list)
-                        {
-                            File.WriteAllText(f.name, f.cont);
+                            var temp = header.Split('-');
+                            var fileSize = int.Parse(temp[0]);
+                            var fileName = temp[1];
+                            //write to file
+                            using (var stream = new FileStream(fileName, FileMode.Create))
+                            {
+                                stream.Write(content, pos + 1, fileSize);
+                                stream.Close();
+                            }
+
+                            pos += fileSize + 1;
                         }
 
                         break;
+
                     default:
                         invokeManual();
                         break;
@@ -79,21 +84,6 @@ namespace mytar
     --store:    packs all src into [dest]
     --restore:  unpacks all files stored in [dest] into the current directory
     --help:     this screen");
-        }
-
-        struct IndFiles
-        {
-            public readonly string name;
-            public readonly long len;
-            public readonly string cont;
-
-
-            public IndFiles(string name, long len, string cont)
-            {
-                this.name = name;
-                this.len = len;
-                this.cont = cont;
-            }
         }
     }
 }

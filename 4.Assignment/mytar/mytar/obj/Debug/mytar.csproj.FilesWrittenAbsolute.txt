@@ -8,3 +8,8 @@
 /home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/obj/Debug/mytar.exe.mdb
 /home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/bin/Debug/mytar.exe.mdb
 /home/mbg/Documents/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/bin/Debug/mytar.exe
+/home/mbg/Desktop/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs
+/home/mbg/Desktop/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/obj/Debug/mytar.exe
+/home/mbg/Desktop/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/obj/Debug/mytar.exe.mdb
+/home/mbg/Desktop/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/bin/Debug/mytar.exe.mdb
+/home/mbg/Desktop/WS2018-Advanced-Programming/4.Assignment/mytar/mytar/bin/Debug/mytar.exe
